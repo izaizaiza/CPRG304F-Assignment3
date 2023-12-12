@@ -1,0 +1,8 @@
+Project part/section     Status (Percentage Completion)
+BSTree.java              Completed (100%)
+BSTreeNode.java          Completed (100%)
+BSTreeTest.java          Completed (100%)
+BSTreeNodeTest.java      Completed (100%)
+javadocs (-private)      Completed (100%)
+
+No known deficiencies.
