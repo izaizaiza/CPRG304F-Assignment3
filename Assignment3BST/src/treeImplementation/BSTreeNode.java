@@ -26,8 +26,6 @@ public class BSTreeNode<E> {
      */
     public BSTreeNode(){
         this.element = null;
-        this.leftChild = null;
-        this.rightChild = null;
     }
     
     /**

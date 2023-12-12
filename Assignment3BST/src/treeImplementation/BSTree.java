@@ -169,7 +169,7 @@ public class BSTree<E extends Comparable<? super E>> implements BSTreeADT<E> {
     public Iterator<E> inorderIterator() {
         List<E> elements = new ArrayList<>();
         inorderTraversal(root, elements);
-        return (Iterator<E>) elements.iterator();
+        return new TreeIterator<>(elements);
     }
 
     private void inorderTraversal(BSTreeNode<E> node, List<E> elements) {
@@ -184,7 +184,7 @@ public class BSTree<E extends Comparable<? super E>> implements BSTreeADT<E> {
     public Iterator<E> preorderIterator() {
         List<E> elements = new ArrayList<>();
         preorderTraversal(root, elements);
-        return (Iterator<E>) elements.iterator();
+        return new TreeIterator<>(elements);
     }
 
     private void preorderTraversal(BSTreeNode<E> node, List<E> elements) {
@@ -199,7 +199,7 @@ public class BSTree<E extends Comparable<? super E>> implements BSTreeADT<E> {
     public Iterator<E> postorderIterator() {
         List<E> elements = new ArrayList<>();
         postorderTraversal(root, elements);
-        return (Iterator<E>) elements.iterator();
+        return new TreeIterator<>(elements);
     }
     private void postorderTraversal(BSTreeNode<E> node, List<E> elements) {
         if (node != null) {
@@ -208,4 +208,33 @@ public class BSTree<E extends Comparable<? super E>> implements BSTreeADT<E> {
             elements.add(node.getElement());
         }
     }
+    
+    // Assume that TreeIterator implements utilities.Iterator
+    private class TreeIterator<E> implements Iterator<E> {
+        private List<E> elements;
+        private int currentIndex;
+
+        public TreeIterator(List<E> elements) {
+            this.elements = elements;
+            this.currentIndex = 0;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return currentIndex < elements.size();
+        }
+
+        @Override
+        public E next() {
+            if (!hasNext()) {
+                throw new java.util.NoSuchElementException("No more elements in the iterator.");
+            }
+            return elements.get(currentIndex++);
+        }
+    }
 }
+
+
+
+
+
