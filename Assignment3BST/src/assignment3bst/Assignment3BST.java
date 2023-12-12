@@ -6,7 +6,7 @@ package assignment3bst;
 
 import treeImplementation.BSTreeNode;
 /**
- *
+ * @author dlg12
  * @author izalu
  */
 public class Assignment3BST {

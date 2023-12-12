@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 import treeImplementation.BSTreeNode;
 
 /**
- *
+ * @author dlg12
  * @author izalu
  */
 

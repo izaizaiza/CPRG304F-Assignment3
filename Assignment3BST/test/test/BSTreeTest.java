@@ -15,8 +15,8 @@ import static org.junit.Assert.*;
 import treeImplementation.BSTree;
 import utilities.Iterator;
 /**
- *
- * @author 
+ * @author dlg12
+ * @author izalu
  */
 public class BSTreeTest {
     
